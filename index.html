@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>
+            姓名:{{name}}
+        </h2>
+        <input type="text" v-model="name">
+        <h2>
+            更多:{{more.info}}
+        </h2>
+        <input v-model="more.info" cols="30" rows="10"></input>
+    </div>
+</body>
+<script src="Vue.js">
+</script>
+<script>
+let vue = new Vue({
+    el:'#app',
+    data(){
+        return {
+            name:"李洛克",
+            more:{
+                info:"我是木叶美丽的苍蓝野兽：李洛克 。"
+            }
+        }
+    }
+})
+</script>
+</html>
